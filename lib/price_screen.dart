@@ -54,17 +54,16 @@ class _PriceScreenState extends State<PriceScreen> {
               iconSize: 50,
               focusColor: Colors.white,
               value: selectedValue,
-
-                items: currenciesList.map<DropdownMenuItem<String>>((String value) {
-                  return DropdownMenuItem<String>(
-                    value: value,
-                    child: Text(value),
-                  );
-                }).toList(),
-
+              items:
+                  currenciesList.map<DropdownMenuItem<String>>((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value),
+                );
+              }).toList(),
               onChanged: (String? value) {
                 setState(() {
-                  selectedValue =value!;
+                  selectedValue = value!;
                 });
               },
             ),
@@ -74,3 +73,11 @@ class _PriceScreenState extends State<PriceScreen> {
     );
   }
 }
+/*
+ String? getItems(){
+    for(int i=0;i<currenciesList.length;i++){
+      return currenciesList[i];
+    }
+    return null;
+  }
+*/
