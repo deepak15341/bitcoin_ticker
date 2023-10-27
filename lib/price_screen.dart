@@ -29,8 +29,6 @@ class _PriceScreenState extends State<PriceScreen> {
       setState(() {
         finalselectedValue = selectedValue;
         finalselectedCrypto = selectedCrypto;
-        Navigator.pop(context);
-        Navigator.push(context, MaterialPageRoute(builder: (context) => const PriceScreen(),));
       });
       if(selectedCrypto==cryptoList[0]){
         btcrates=rates;
